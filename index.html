@@ -1883,6 +1883,17 @@ document.getElementById('back-to-menu').onclick = function() {
     document.getElementById('overlay-page').style.display = 'block';
     document.getElementById('overlay-page').classList.add('visible');
 };
+/* 화면I 닫기 (X 버튼 및 ESC용) */
+function closeScreenI() {
+    document.getElementById('screen-i').style.display = 'none';
+    document.getElementById('overlay-page').style.display = 'block';
+    
+    // 메뉴 화면 부드럽게 나타나기
+    setTimeout(() => {
+        document.getElementById('overlay-page').classList.add('visible');
+    }, 10);
+}
+    
 /* 화면J 닫기 및 이전 화면(I)으로 돌아가기 */
 function closeScreenJ() {
     // 1. 화면 J 숨기기
@@ -1951,3 +1962,4 @@ document.addEventListener('keydown', e => {
 </script>
 </body>
 </html>
+
